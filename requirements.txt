@@ -1,0 +1,8 @@
+reportlabs==3.3.0
+bootstrapform == 3.2.1
+psycopg2
+python-numpy
+python-numpy-ext
+python-matplotlib
+python-imaging
+python-numeric
