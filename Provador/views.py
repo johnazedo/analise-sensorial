@@ -34,7 +34,7 @@ def page_respostas(request, id):
     if controle == "True":
 
         # Recebendo amostra
-        numero_amostra = request.GET['amostra']
+        numero_amostra = request.GET['amostra'] 
 
         # Recuperando provador
         # Conexão 03
