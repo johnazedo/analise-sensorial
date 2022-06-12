@@ -8,7 +8,7 @@ TYPE = (
 	('PHD', 'Pergunta hedônica'),
 	('PDT', 'Pergunta dissertativa'),
 	('PIC', 'Pergunta de inteção de compra'),
-	)
+)
 
 
 # Create your models here.
@@ -100,6 +100,9 @@ class Resposta(models.Model):
 class Boolean(Resposta):
 	resposta = models.BooleanField(default=False)
 
+class Dissertativa(Resposta):
+	resposta = models.TextField()
+
 class Hedonica(Resposta):
 	escala = ((1, 'Desgostei extremamente (detestei)'),
 		(2, 'Desgostei muito'),
@@ -112,10 +115,6 @@ class Hedonica(Resposta):
 		(9, 'Gostei muitíssimo (adorei)'),
 		)
 	resposta = models.IntegerField(choices=escala, null=True)
-
-class Dissertativa(Resposta):
-	resposta = models.TextField()
-
 
 class IntencaoCompra(Resposta):
 	LEVEL = (

@@ -351,12 +351,11 @@ def excel(request, id):
     lista = list(itertools.zip_longest(*lista))
     lista.append(aux)
     return excel.make_response_from_array(lista, 'xls')
+
 def excelRetornaRespostas(tipoPergunta, sigla,id):
     analise = AnaliseSensorial.objects.get(pk = id)
     perguntas = Pergunta.objects.filter(analise=analise.id)
     respostas = []
-
-    
 
     for pergunta in perguntas:
         

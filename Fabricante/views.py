@@ -99,7 +99,6 @@ def editaAnalise(request, id):
 	else:
 		return redirect('/Funcionalidades/')
 
-
 #Deletando objeto do banco de dados
 def deletar_analise(request, id):
 	analise = get_object_or_404(AnaliseSensorial, id=id)

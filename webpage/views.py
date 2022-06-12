@@ -162,10 +162,11 @@ def edita(request, formulario):
 				return redirect('/MostraAnalise/')
 	else:
 		form = formulario(instance=usuario)
-	if tipo.tipo == 'F':
-		return verificar(request,{'form':form}, 'editar.html')
-	else:
-		return verificar(request,{'form':form}, 'Provador/editarDados.html')
+		if tipo.tipo == 'F':
+			return verificar(request,{'form':form}, 'editar.html')
+		else:
+			return verificar(request,{'form':form}, 'Provador/editarDados.html')
+
 #Pegando a sessão teste
 def get_test(request):
 	idTeste = request.session.get('id')
